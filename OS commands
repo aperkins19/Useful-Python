@@ -1,0 +1,17 @@
+import os
+
+
+###### renamer
+
+# go back up a directory
+os.chdir("..")
+
+#get current working directory
+os.getcwd()
+
+# define a path
+collection = "cell_images/Parasitized/"
+
+#loop through all the files in a directory
+for i, filename in enumerate(os.listdir(collection)):
+    os.rename("cell_images/Parasitized/" + filename, "cell_images/Parasitized/" + str(i) + ".png")
